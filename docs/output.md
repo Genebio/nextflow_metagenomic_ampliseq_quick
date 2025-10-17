@@ -4,7 +4,7 @@ output:
   html_document: default
 ---
 
-# nf-core/ampliseq: Output
+# ampliseq: Output
 
 ## Introduction
 
@@ -364,7 +364,7 @@ Taxonomic classification with QIIME2 is based on a classifier trained on sequenc
 
 ### Phylogenetic placement and taxonomic classification
 
-Phylogenetic placement grafts sequences onto a phylogenetic reference tree and optionally outputs taxonomic annotations. The reference tree is ideally made from full-length high-quality sequences containing better evolutionary signal than short amplicons. It is hence superior to estimating de-novo phylogenetic trees from short amplicon sequences. On providing required reference files, ASV sequences are aligned to the reference alignment with either [HMMER](http://hmmer.org/) (default) or [MAFFT](https://mafft.cbrc.jp/alignment/software/). Subsequently, phylogenetic placement of query sequences is performed with [EPA-NG](https://github.com/Pbdas/epa-ng), and finally a number of summary operations are performed with [Gappa](https://github.com/lczech/gappa). This uses code from [nf-core/phyloplace](https://nf-co.re/phyloplace) in the form of its main [subworkflow](https://github.com/nf-core/modules/tree/master/subworkflows/nf-core/fasta_newick_epang_gappa), therefore its detailed documentation also applies here.
+Phylogenetic placement grafts sequences onto a phylogenetic reference tree and optionally outputs taxonomic annotations. The reference tree is ideally made from full-length high-quality sequences containing better evolutionary signal than short amplicons. It is hence superior to estimating de-novo phylogenetic trees from short amplicon sequences. On providing required reference files, ASV sequences are aligned to the reference alignment with either [HMMER](http://hmmer.org/) (default) or [MAFFT](https://mafft.cbrc.jp/alignment/software/). Subsequently, phylogenetic placement of query sequences is performed with [EPA-NG](https://github.com/Pbdas/epa-ng), and finally a number of summary operations are performed with [Gappa](https://github.com/lczech/gappa). This uses code from [phyloplace](https://nf-co.re/phyloplace) in the form of its main [subworkflow](https://github.com/modules/tree/master/subworkflows/fasta_newick_epang_gappa), therefore its detailed documentation also applies here.
 
 <details markdown="1">
 <summary>Output files</summary>
@@ -616,7 +616,7 @@ You can use the `--sbdiexport` flag (or `sbdiexport: true` in a nextflow paramet
 Tables are generated from the DADA2 denoising and taxonomy assignment steps.
 Each table, except `annotation.tsv`, corresponds to one tab in the [submission template](https://asv-portal.biodiversitydata.se/submit).
 See [`docs/usage.md`](docs/usage.md) for further information.
-Most of the fields in the template will not be populated by the export process, but if you run nf-core/ampliseq with a sample metadata table (`--metadata`) any fields corresponding to a field in the template will be used.
+Most of the fields in the template will not be populated by the export process, but if you run ampliseq with a sample metadata table (`--metadata`) any fields corresponding to a field in the template will be used.
 
 <details markdown="1">
 <summary>Output files</summary>

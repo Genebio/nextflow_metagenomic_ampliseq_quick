@@ -1,4 +1,4 @@
-# nf-core/ampliseq: Documentation
+# ampliseq: Documentation
 
 ## Quick Start
 
@@ -12,7 +12,7 @@ This will run the pipeline with a minimal test dataset and the docker profile.
 
 ## Pipeline Steps
 
-The nf-core/ampliseq pipeline processes raw sequencing data to produce an Amplicon Sequence Variant (ASV) table and taxonomic assignments. The main steps are as follows:
+The ampliseq pipeline processes raw sequencing data to produce an Amplicon Sequence Variant (ASV) table and taxonomic assignments. The main steps are as follows:
 
 1.  **Input Validation:** The pipeline validates the input samplesheet and read files.
 2.  **Adapter and Primer Trimming:** `Cutadapt` is used to remove adapter sequences and PCR primers from the raw reads.
